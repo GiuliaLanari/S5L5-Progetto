@@ -2,8 +2,8 @@
 
 
 class User{
-    protected $name;
-    protected $id;
+    public $name;
+    public $id;
     
    
     public function __construct($id=null, $pdo=null)
@@ -19,8 +19,11 @@ class User{
         ]);
     
         $user_db = $stmt->fetch();
+        $this->name= $user_db["user"];
+        $this->id= $user_db["id"];
         }
-     
+    
+
 
     }
 

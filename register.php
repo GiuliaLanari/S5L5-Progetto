@@ -2,7 +2,7 @@
 
 include_once __DIR__ . '/includes/init.php';
 
-if ($user_db) header('Location:/S5L5-Progetto/');
+if ($my_user->id) header('Location:/S5L5-Progetto/');
 
 $users = [];
 $user = $_POST['user'] ?? '';

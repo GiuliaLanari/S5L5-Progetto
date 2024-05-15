@@ -2,24 +2,57 @@
 <?php
 
 
-include __DIR__ . '/includes/init.php';
+include_once __DIR__ . '/includes/init.php';
 
 include __DIR__ . '/includes/start.php';
-
-if ($user_db){?>
-  <h1>Ciao <?=$user_db["user"] ?>!</h1><?php
-} 
-else{?>
-  <h1>Benvenuti</h1><?php
-}
-
-?>
+include_once __DIR__ ."/classes/Dvd.php";
 
 
-<!-- <a type="button" class="btn btn-primary" href="/S5L5-Progetto/register.php">Registrazione</a>
-<a type="button" class="btn btn-success" href="/S5L5-Progetto/login.php">Login</a> -->
+
+
+
+if ($my_user->id){?>
+  <h1>Ciao <?= $my_user->name ?>!</h1>
+  
+<a class="btn btn-success my-4" href= "http://localhost/S5L5-Progetto/form-add.php">Add New</a>
 
 
 
 <?php
+
+$dvd= new Dvd();
+$dvd->getAll($pdo);
+
+  
+ 
+} 
+else{?>
+
+  <h1 class="text-center my-5">Benvenuti</h1>
+  <p class="text-center">Cosa ASPETTI  registrati subito al nostro sito, troverai molti film esclusivi!</p>
+  <div class="row my-4 justify-content-center">
+    <h4>Anteprima</h4>
+    <div class="col-12 col-md-3 ">
+    <img class="w-100 h-100" src="./assests/avengers.webp" alt="cover-film">
+    </div>
+    <div class="col-12 col-md-3">
+    <img class="w-100 h-100" src="./assests/iron-man3.jpg" alt="cover-film">
+    </div>
+    <div class="col-12 col-md-3">
+    <img class="w-100 h-100"  src="./assests/images.jpg" alt="cover-film">
+    </div>
+  
+
+  </div>
+  
+  
+  
+  <?php
+  
+}
+
+
+
+
+
 include __DIR__ . '/includes/end.php';

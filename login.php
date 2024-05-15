@@ -5,7 +5,7 @@ include_once __DIR__ . '/includes/start.php';
 include_once __DIR__ . "/classes/User.php";
 include_once __DIR__ . "/includes/init.php";
 
-if ($user_db) {header('Location:/S5L5-Progetto/login.php');}
+if ($my_user->id) {header('Location:/S5L5-Progetto/login.php');}
 
 
 
