@@ -35,7 +35,7 @@ else{?>
   <p class="text-center">Cosa ASPETTI  registrati subito al nostro sito, troverai molti film esclusivi!</p>
   <div class="row my-4 justify-content-center">
     <h4>Anteprima</h4>
-    <div class="col-12 col-md-5 ">
+    <div class="col-12 col-md-3 ">
     <img class="w-100 h-100" src="./assests/avengers.webp" alt="cover-film">
     </div>
     <div class="col-12 col-md-3">
