@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__. "/includes/database.php";
+
 include_once __DIR__ . '/includes/init.php';
 include __DIR__ . '/includes/start.php';
 include_once __DIR__ ."/classes/Dvd.php";

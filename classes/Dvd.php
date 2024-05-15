@@ -24,7 +24,7 @@ class Dvd{
 
         foreach($dvds as $dvd){
             echo "<div class='card'>";
-        
+            echo "<img src= $dvd[img] class='card-img-top height-img' alt='img'>";
             echo "<div class='card-body'>";
             echo "<h5>".$dvd['title'] . "<h5>" ;
             echo "<p>" .$dvd['description']  . "<p>";
@@ -51,6 +51,7 @@ $info = $stmt->fetch();
 if($info ){
     echo '<h1 class="display-2 text-center my-5">Dettagli DVD:</h1>';
     echo '<div class="card col-6 mx-auto" >';
+    echo "<img src= $info[img] class='card-img-top height-img' alt='img'>";
     echo '<div class="card-body d-flex flex-column ">';
     echo " <h5 class=\"card-title display-6 text-center\"> $info[title] </h5> ";
     echo "<p class=\"card-text \">Description: $info[description] </p>";
@@ -61,10 +62,11 @@ if($info ){
 
     }
 
-    public function create($pdo, $title, $description, $genere){
-        $stmt = $pdo->prepare("INSERT INTO dvd (title, description, genere) VALUES (:title, :description, :genere)");
+    public function create($pdo, $title, $img, $description, $genere){
+        $stmt = $pdo->prepare("INSERT INTO dvd (title, img, description, genere) VALUES (:title, :img, :description, :genere)");
     $stmt->execute([
         'title' => $title,
+        'img'=>$img,
         'description' => $description ,
         'genere' => $genere,
         ]);
@@ -73,12 +75,13 @@ if($info ){
 
 
 
-    public function update($pdo, $id, $title, $description, $genere){
+    public function update($pdo, $id, $title, $img, $description, $genere){
 
-        $stmt = $pdo->prepare("UPDATE dvd SET title= :title, description= :description, genere= :genere WHERE id=:id");
+        $stmt = $pdo->prepare("UPDATE dvd SET title= :title, img= :img, description= :description, genere= :genere WHERE id=:id");
 $stmt->execute([
     'id'=> $id,
     'title'=> $title,
+    'img'=>$img,
     'description' => $description,
     'genere' => $genere,
     

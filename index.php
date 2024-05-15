@@ -16,15 +16,16 @@ if ($my_user->id){?>
   
 <a class="btn btn-success my-4" href= "http://localhost/S5L5-Progetto/form-add.php">Add New</a>
 
-
+<div class="col-12 col-md-4">
 
 <?php
 
 $dvd= new Dvd();
 $dvd->getAll($pdo);
 
-  
- 
+  ?>
+</div>
+<?php
 } 
 else{?>
 

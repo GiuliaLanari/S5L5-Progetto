@@ -18,11 +18,11 @@ include_once __DIR__ ."/includes/start.php";
     <input type="text" name="title" class="form-control " id="title" placeholder="Title" >
   
   </div>
-  <!-- <div class="col-md-12">
-    <label for="publications" class="form-label">Publications:</label>
-    <input type="date" class="form-control" name="publications" id="publications" placeholder="Publications" >
+  <div class="col-md-12">
+    <label for="img" class="form-label">Cover film:</label>
+    <input type="text" class="form-control" name="img" id="img" placeholder="Adress cover" >
    
-  </div> -->
+  </div>
 
   <div class="col-md-12">
       <label for="description" class="form-label">Description:</label>

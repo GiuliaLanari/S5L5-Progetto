@@ -30,11 +30,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     <input type="text" name="title" class="form-control " id="title" placeholder="Title" value="<?=$row["title"] ?>" >
   
   </div>
-  <!-- <div class="col-md-12">
-    <label for="publications" class="form-label">Publications:</label>
-    <input type="date" class="form-control" name="publications" id="publications" placeholder="Publications" value="$row["publications"] " >
+  <div class="col-md-12">
+    <label for="img" class="form-label">Cover film:</label>
+    <input type="text" class="form-control" name="img" id="img" placeholder="Img" value="<?=$row["img"] ?>" >
    
-  </div> -->
+  </div>
 
   <div class="col-md-12">
       <label for="description" class="form-label">Description:</label>
