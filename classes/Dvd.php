@@ -23,8 +23,9 @@ class Dvd{
         $dvds= $stmt->fetchAll();
 
         foreach($dvds as $dvd){
+            
             echo "<div class='card'>";
-            echo "<img src= $dvd[img] class='card-img-top height-img' alt='img'>";
+            echo "<img src= $dvd[img] class='card-img-top ' alt='img'>";
             echo "<div class='card-body'>";
             echo "<h5>".$dvd['title'] . "<h5>" ;
             echo "<p>" .$dvd['description']  . "<p>";
@@ -49,8 +50,8 @@ $stmt->execute([$id]);
 $info = $stmt->fetch();
 
 if($info ){
-    echo '<h1 class="display-2 text-center my-5">Dettagli DVD:</h1>';
-    echo '<div class="card col-6 mx-auto" >';
+    echo '<h1 class="display-4 text-center my-5">Dettagli DVD:</h1>';
+    echo '<div class="card col-6 mx-auto mb-4" >';
     echo "<img src= $info[img] class='card-img-top height-img' alt='img'>";
     echo '<div class="card-body d-flex flex-column ">';
     echo " <h5 class=\"card-title display-6 text-center\"> $info[title] </h5> ";

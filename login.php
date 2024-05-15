@@ -18,7 +18,9 @@ $my_user->login($pdo, $user, $password);
 
 include_once __DIR__ . '/includes/start.php'; ?>
 
-    <h1>Login</h1>
+<div class="col-12 col-md-6 mx-auto my-3">
+
+    <h1 class="my-5">Login</h1>
     <?php if (isset($insuccess)): ?>
         <p class='text-danger text-center fw-bold'>Credenziali non valide</p>
     <?php endif; ?>
@@ -33,6 +35,9 @@ include_once __DIR__ . '/includes/start.php'; ?>
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
+
+</div>
+
 
 <?php
 include __DIR__ . '/includes/end.php';

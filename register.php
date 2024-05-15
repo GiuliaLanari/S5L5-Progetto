@@ -52,8 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include_once __DIR__ . '/includes/start.php';
 
 ?>
+
+<div class="col-12 col-md-6 mx-auto">
    
-    <h1>Register</h1>
+    <h1 class="my-5">Register</h1>
     <form action="" method="POST" novalidate>
         <div class="mb-3">
             <label for="user" class="form-label">Username</label>
@@ -72,6 +74,6 @@ include_once __DIR__ . '/includes/start.php';
         </div>
         <button type="submit" class="btn btn-primary">Registrazione</button>
     </form>
-
+</div>
 <?php
 include __DIR__ . '/includes/end.php';

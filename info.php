@@ -9,6 +9,9 @@ $id = $_GET['id'];
 $dvd= new Dvd();
 $dvd->getById($pdo, $id);
 
-
-
-include __DIR__ . '/includes/end.php';
+?>
+</div>
+</div>
+</div>
+</body>
+</html>

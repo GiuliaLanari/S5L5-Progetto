@@ -12,9 +12,11 @@ include_once __DIR__ ."/classes/Dvd.php";
 
 
 if ($my_user->id){?>
-  <h1>Ciao <?= $my_user->name ?>!</h1>
+  <h1 class="my-5 text-center display-4">Ciao <?= $my_user->name ?>!</h1>
   
 <a class="btn btn-success my-4" href= "http://localhost/S5L5-Progetto/form-add.php">Add New</a>
+
+
 
 <div class="col-12 col-md-4">
 
@@ -33,7 +35,7 @@ else{?>
   <p class="text-center">Cosa ASPETTI  registrati subito al nostro sito, troverai molti film esclusivi!</p>
   <div class="row my-4 justify-content-center">
     <h4>Anteprima</h4>
-    <div class="col-12 col-md-3 ">
+    <div class="col-12 col-md-5 ">
     <img class="w-100 h-100" src="./assests/avengers.webp" alt="cover-film">
     </div>
     <div class="col-12 col-md-3">
@@ -51,7 +53,6 @@ else{?>
   <?php
   
 }
-
 
 
 
